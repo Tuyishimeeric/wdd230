@@ -1,0 +1,48 @@
+@media screen and (min-width:1024px){
+    header{
+        padding:3rem;
+        text-align: left;
+    }
+    header img{
+        width:150px;
+        height:150px;
+    }
+    nav{
+        background-color:beige;
+        padding:1.5rem;
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    nav a{
+        color:black;
+        font-size: 1.2rem;
+    }
+    nav li{
+        margin:0 1.5rem;
+    }
+    nav a:hover{
+        color:aquamarine;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 2fr 21fr;
+        gap:2rem;
+        padding:3rem;
+    
+    }
+    .card h2{
+        font-size: 2rem;
+
+    }
+    footer{
+        text-align: left;
+        padding: 2rem;
+        background-color: #34495e;
+        color:white;
+    }
+    footer p{
+        font-size:1.2rem;
+    }
+}
