@@ -1,0 +1,102 @@
+
+/* Normalize CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366;
+    color: white;
+    padding: 1rem;
+}
+header img {
+    height: 50px;
+}
+header h1 {
+    font-size: 1.5rem;
+}
+
+/* Navigation */
+nav {
+    background-color: #00509E;
+    padding: 1rem;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    display: block;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Main Content */
+main {
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+}
+.hero-image {
+    width: 100%;
+    height: auto;
+}
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+}
+.cta-button {
+    display: inline-block;
+    background-color: #FFA500;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #003366;
+    color: white;
+}
