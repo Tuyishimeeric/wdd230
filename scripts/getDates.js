@@ -1,14 +1,27 @@
-// Get the current year dynamically
+// Set current year in the footer
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-// Get the last modified date of the document
+// Set the last modified date in the footer
 const lastModifiedDate = document.lastModified;
 document.getElementById('lastModified').textContent = 'Last modified: ' + lastModifiedDate;
 
-// Mock data for weather and visits
-const mockWeather = "25°C, Sunny";
-const mockVisits = 250;
+// Dark Mode Toggle
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const body = document.body;
 
-// Update weather and visits data dynamically
-document.getElementById('weather-info').textContent = mockWeather;
-document.getElementById('visit-count').textContent = mockVisits;
+darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    if (body.classList.contains('dark-mode')) {
+        darkModeToggle.textContent = '🌞';  // Change icon to sun for light mode
+    } else {
+        darkModeToggle.textContent = '🌙';  // Change icon to moon for dark mode
+    }
+});
+
+// Hamburger Menu Toggle
+const hamburger = document.getElementById('hamburger');
+const navbar = document.getElementById('navbar');
+
+hamburger.addEventListener('click', () => {
+    navbar.classList.toggle('show');
+});

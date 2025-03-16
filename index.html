@@ -1,55 +1,100 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TUYISHIME Eric - WDD 230: Web Frontend Development</title>
-    <meta name="description" content="WDD 230 - Web Frontend Development course assignment portal for TUYISHIME Eric">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=open+sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
-</head>
-<body>
-    <header>
-        <img src="images/profile.JPG" alt="TUYISHIME Eric" width="100" height="100">
-        <span>TUYISHIME Eric</span>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Chamber Site Plan - WDD 230: Web Frontend Development</title>
+        <meta name="description" content="A site plan for the Chamber website project.">
+        
+        <!-- Open Graph Meta Tags for Social Media -->
+        <meta property="og:title" content="Chamber Site Plan">
+        <meta property="og:description" content="Site plan for the Chamber website project.">
+        <meta property="og:image" content="images/preview-image.jpg">
+        <meta property="og:url" content="https://yourusername.github.io/chamber-site">
 
-    <nav>
-        <ul>
-            <li><a href="#" id="home-link">Home</a></li>
-            <li><a href="#chamber">Chamber</a></li>
-            <li><a href="#site-plan">Site Plan</a></li>
-            <li><a href="#form">Form</a></li>
-        </ul>
-    </nav>
+        <!-- Favicon -->
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <main>
-        <section class="card">
-            <h2>Learning Activities</h2>
-            <ul>
-                <li><a href="#">week01:</a></li>
-                <li><a href="#">week02:</a></li>
-                <li><a href="#">week03:</a></li>
-                <li><a href="#">week04:</a></li>
-                <li><a href="#">week05:</a></li>
-                <li><a href="#">week06:</a></li>
+        <!-- Link to CSS files -->
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/larger.css">
+    </head>
+    <body>
+        <header>
+            <img src="images/profile.JPG" alt="TUYISHIME Eric" width="100" height="100">
+            <span>Chamber Site - TUYISHIME Eric</span>
+            <!-- Dark Mode Toggle Button -->
+            <button id="dark-mode-toggle">🌙</button>
+        </header>
+
+        <nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">☰</button>
+            <ul id="navbar">
+                <li><a href="#home-link">Home</a></li>
+                <li><a href="#chamber">Chamber</a></li>
+                <li><a href="#site-plan">Site Plan</a></li>
+                <li><a href="#form">Form</a></li>
             </ul>
-        </section>
+        </nav>
 
-        <section class="card">
-            <h2>Information</h2>
-            <p id="weather">Weather: <span id="weather-info">Loading...</span></p>
-            <p id="visits">Visits: <span id="visit-count">Loading...</span></p>
-        </section>
-    </main>
+        <main>
+            <h1>Chamber Website Plan</h1>
 
-    <footer>
-        <p>&copy; <span id="currentYear"></span> TUYISHIME Eric, Kigali RWANDA</p>
-        <p id="lastModified"></p>
-    </footer>
+            <!-- Site Purpose Section -->
+            <section class="card" id="site-purpose">
+                <h2>Site Purpose</h2>
+                <ul>
+                    <li>To provide users with an easy way to view the Chamber's activities.</li>
+                    <li>To offer a platform for users to fill out a contact or inquiry form.</li>
+                </ul>
+            </section>
 
-    <!-- Reference to external JavaScript file -->
-    <script src="scripts/getDates.js"></script>
-</body>
+            <!-- Scenario Questions Section -->
+            <section class="card" id="scenario-questions">
+                <h2>Scenario Questions</h2>
+                <ul>
+                    <li>How can a user easily navigate to the Chamber's events calendar?</li>
+                    <li>What does a visitor need to know before contacting the Chamber?</li>
+                    <li>How would a user get more information about the Chamber's community programs?</li>
+                </ul>
+            </section>
+
+            <!-- Color Scheme Section -->
+            <section class="card" id="color-scheme">
+                <h2>Color Scheme</h2>
+                <ul>
+                    <li>Primary Color: <span style="color: #0000ee;">#0000ee</span> - Used for headers and navigation links.</li>
+                    <li>Secondary Color: <span style="color: #894;">#894</span> - Used for background and buttons.</li>
+                </ul>
+            </section>
+
+            <!-- Typography Section -->
+            <section class="card" id="typography">
+                <h2>Typography</h2>
+                <ul>
+                    <li>Primary Font: 'Roboto' - Used for headings and subheadings.</li>
+                    <li>Secondary Font: 'Open Sans' - Used for body text and paragraphs.</li>
+                </ul>
+            </section>
+
+            <!-- Wireframe Sketch Section -->
+            <section class="card" id="wireframes">
+                <h2>Wireframe Sketches</h2>
+                <ul>
+                    <li><strong>Mobile View:</strong> <img src="images/mobilewireframe.png" alt="Mobile Wireframe" width="300"></li>
+                    <li><strong>Larger View:</strong> <img src="images/largerwireframe.png" alt="Larger Wireframe" width="500"></li>
+                </ul>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>&copy; <span id="currentYear"></span> TUYISHIME Eric, Kigali RWANDA</p>
+            <p id="lastModified"></p>
+        </footer>
+
+        <!-- External JavaScript File -->
+        <script src="scripts/getDates.js"></script>
+    </body>
 </html>
