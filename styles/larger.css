@@ -1,48 +1,47 @@
-@media screen and (min-width:1024px){
-    header{
-        padding:3rem;
+/* Styling for larger screen devices (1024px and above) */
+@media screen and (min-width: 1024px) {
+    header {
+        padding: 3rem;
         text-align: left;
     }
-    header img{
-        width:150px;
-        height:150px;
+    header img {
+        width: 150px;
+        height: 150px;
     }
-    nav{
-        background-color:beige;
-        padding:1.5rem;
+    nav {
+        background-color: beige;
+        padding: 1.5rem;
     }
-    nav ul{
+    nav ul {
         display: flex;
         justify-content: space-around;
     }
-    nav a{
-        color:black;
+    nav a {
+        color: black;
         font-size: 1.2rem;
     }
-    nav li{
-        margin:0 1.5rem;
+    nav li {
+        margin: 0 1.5rem;
     }
-    nav a:hover{
-        color:aquamarine;
+    nav a:hover {
+        color: aquamarine;
     }
-    main{
+    main {
         display: grid;
-        grid-template-columns: 2fr 21fr;
-        gap:2rem;
-        padding:3rem;
-    
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        padding: 3rem;
     }
-    .card h2{
+    .card h2 {
         font-size: 2rem;
-
     }
-    footer{
+    footer {
         text-align: left;
         padding: 2rem;
         background-color: #34495e;
-        color:white;
+        color: white;
     }
-    footer p{
-        font-size:1.2rem;
+    footer p {
+        font-size: 1.2rem;
     }
 }

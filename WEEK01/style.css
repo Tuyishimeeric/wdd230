@@ -1,0 +1,60 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #005f73;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+}
+
+/* Section Styling */
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h2 {
+    color: #005f73;
+    font-family: 'Merriweather', serif;
+}
+
+/* List Styling */
+ul {
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #005f73;
+    color: white;
+    margin-top: 20px;
+}
