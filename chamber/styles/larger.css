@@ -26,21 +26,48 @@
     }
 
     /* Hero Section */
-    .hero-text {
-        font-size: 1.5rem;
-        padding: 1.5rem;
-    }
-
     .hero {
         position: relative;
         text-align: center;
-        height: 400px;
+        height: 400px; /* Set hero section height */
     }
 
     .hero-image {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: cover; /* Ensures image covers the area without distorting */
+    }
+
+    .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centers text vertically and horizontally */
+        color: white;
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text readability */
+        padding: 1.5rem;
+        font-size: 1.5rem;
+        z-index: 1;
+    }
+
+    .hero-text h2 {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .cta-button {
+        background-color: #FFA500;
+        color: white;
+        padding: 0.8rem 1.5rem;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background-color: #ff8c00; /* Slightly darker orange on hover */
     }
 
     /* Main Content Layout */
@@ -103,7 +130,7 @@
         background-color: #00509E;
         color: white;
         margin-top: 1.5rem;
-        padding: 0.8rem 1.5rem; /* Larger button for better clickability */
+        padding: 0.8rem 1.5rem; /* Larger button for better click ablity */
         font-size: 1.2rem;
         text-decoration: none;
         border-radius: 5px;
@@ -120,5 +147,15 @@
     footer {
         text-align: center;
         padding: 2rem;
+    }
+
+    /* Lazy Loading */
+    img[loading="lazy"], iframe[loading="lazy"] {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    img.loaded, iframe.loaded {
+        opacity: 1;
     }
 }

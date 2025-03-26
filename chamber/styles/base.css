@@ -92,11 +92,13 @@ main {
 .hero {
     position: relative;
     text-align: center;
+    height: 400px; /* Hero section height */
 }
 
 .hero-image {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills the area without distorting */
 }
 
 .hero-text {
@@ -107,6 +109,7 @@ main {
     color: white;
     background: rgba(0, 0, 0, 0.5);
     padding: 1rem;
+    font-size: 1.5rem;
 }
 
 .cta-button {
@@ -117,6 +120,11 @@ main {
     text-decoration: none;
     font-size: 1.2rem;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff8c00; /* Darker orange on hover */
 }
 
 /* Footer */
@@ -152,7 +160,8 @@ footer {
 
 .spotlight img {
     width: 100%;
-    height: auto;
+    height: 250px;
+    object-fit: cover; /* Ensure images fill the area while maintaining aspect ratio */
     border-radius: 5px;
 }
 
@@ -196,4 +205,14 @@ footer {
     nav ul.show {
         display: flex;
     }
+}
+
+/* Lazy Loading */
+img[loading="lazy"], iframe[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+img.loaded, iframe.loaded {
+    opacity: 1;
 }

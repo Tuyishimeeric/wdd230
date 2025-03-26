@@ -38,12 +38,19 @@
     </nav>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Hero Section with WebP images and Overlay Text -->
         <section class="hero">
-            <img src="images/hero.jpg" alt="Chamber of Commerce Community" class="hero-image">
-            <div class="hero-text">
-                <h2>Empowering Local Businesses</h2>
-                <a href="#join" class="cta-button">Join the Chamber</a>
+            <picture>
+                <!-- Mobile Image (400px) -->
+                <source srcset="images/baton_rouge_louisiana_temple.webp" media="(max-width: 400px)" type="image/webp">
+                <!-- Larger Image (960px) -->
+                <source srcset="images/02-Billings-Montana-Temple-1572044.webp" media="(min-width: 401px)" type="image/webp">
+                <!-- Fallback Image -->
+                <img src="images/01-Billings-Montana-Temple-2220702.jpg" alt="Latter-day Temple" class="hero-image">
+            </picture>
+            <div class="overlay">
+                <h2>Latter-day Temple</h2>
+                <p>Peace and serenity in a beautiful place.</p>
             </div>
         </section>
 
@@ -59,7 +66,7 @@
             <p>Loading current weather...</p>
         </section>
 
-        <!-- Business Spotlights -->
+        <!-- Business Spotlights Section -->
         <section class="spotlights">
             <h2>Business Spotlights</h2>
             <div class="spotlight">
@@ -81,7 +88,18 @@
                 <a href="#" class="cta-button">Learn More</a>
             </div>
         </section>
-        
+
+        <!-- Page Visit Counter Section -->
+        <section class="info-card">
+            <h3>Page Visit Counter</h3>
+            <p>Number of visits: <span id="visitCount">0</span></p>
+        </section>
+
+        <!-- Google Map Embed Section -->
+        <section class="google-map">
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+
     </main>
 
     <footer>
