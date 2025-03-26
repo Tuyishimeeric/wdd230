@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chamber of Commerce - Discover</title>
+    <meta name="description" content="Discover more about our local businesses, events, and attractions.">
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Chamber of Commerce - Discover">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:url" content="https://tuyishimeeric.github.io/chamber-site">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Chamber of Commerce Logo" width="100">
+        <h1>Chamber of Commerce</h1>
+        <button id="dark-mode-toggle">🌙</button>
+    </header>
+
+    <nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">☰</button>
+        <ul id="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#directory">Directory</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="discover">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Latest Visit</h2>
+            <p id="last-visit-message">Loading last visit...</p>
+
+            <!-- Sidebar Content: Demographics, Calendar, etc. -->
+            <section>
+                <h3>Attractions</h3>
+                <ul>
+                    <li>Local Museum</li>
+                    <li>Public Park</li>
+                    <li>Historic Sites</li>
+                </ul>
+            </section>
+        </aside>
+
+        <!-- Main Content Area (Images) -->
+        <section class="gallery">
+            <h2>Discover Our Local Attractions</h2>
+            <div class="image-grid">
+                <img src="images/attraction1.webp" alt="Attraction 1" loading="lazy" class="gallery-image">
+                <img src="images/attraction2.webp" alt="Attraction 2" loading="lazy" class="gallery-image">
+                <img src="images/attraction3.webp" alt="Attraction 3" loading="lazy" class="gallery-image">
+                <img src="images/attraction4.webp" alt="Attraction 4" loading="lazy" class="gallery-image">
+                <img src="images/attraction5.webp" alt="Attraction 5" loading="lazy" class="gallery-image">
+                <img src="images/attraction6.webp" alt="Attraction 6" loading="lazy" class="gallery-image">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact us: info@chamber.com | (+250) 785 100 566</p>
+        <p>&copy; <span id="currentYear"></span> Chamber of Commerce</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

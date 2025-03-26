@@ -133,4 +133,75 @@
     img.loaded, iframe.loaded {
         opacity: 1;
     }
+    /* General Styles for Sidebar Layout */
+main.discover {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Sidebar (1fr) and Main Content (3fr) */
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.sidebar {
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+}
+
+.sidebar section {
+    margin-top: 2rem;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+/* Gallery (Main Content) */
+.gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
+    gap: 1rem;
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile View (Single Column Layout) */
+@media (max-width: 768px) {
+    main.discover {
+        grid-template-columns: 1fr; /* Single column layout on mobile */
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr; /* Single image per row */
+    }
+
+    .gallery-image {
+        transform: none;
+        box-shadow: none;
+    }
+}
 }

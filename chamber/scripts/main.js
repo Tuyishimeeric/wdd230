@@ -33,3 +33,29 @@ const lazyLoadImages = () => {
 };
 
 lazyLoadImages();  // Invoke on page load
+// Get the current date
+const currentDate = Date.now();
+
+// Get last visit date from localStorage, if available
+const lastVisit = localStorage.getItem('lastVisit');
+const lastVisitMessage = document.getElementById('last-visit-message');
+
+// If it's the user's first visit
+if (!lastVisit) {
+    localStorage.setItem('lastVisit', currentDate);
+    lastVisitMessage.textContent = 'Welcome! Let us know if you have any questions.';
+} else {
+    // Calculate time difference in days
+    const timeDiff = currentDate - lastVisit;
+    const daysSinceLastVisit = Math.floor(timeDiff / (1000 * 3600 * 24));
+
+    if (daysSinceLastVisit < 1) {
+        lastVisitMessage.textContent = 'Back so soon! Awesome!';
+    } else {
+        const dayText = daysSinceLastVisit === 1 ? 'day' : 'days';
+        lastVisitMessage.textContent = `You last visited ${daysSinceLastVisit} ${dayText} ago.`;
+    }
+
+    // Update the last visit date in localStorage
+    localStorage.setItem('lastVisit', currentDate);
+}
