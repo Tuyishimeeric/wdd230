@@ -92,13 +92,14 @@ main {
 .hero {
     position: relative;
     text-align: center;
-    height: 400px; /* Hero section height */
+    height: 300px; /* Fixed height for the hero section */
+    margin-bottom: 2rem; /* Add space below the hero section */
 }
 
 .hero-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures image fills the area without distorting */
+    object-fit: cover;
 }
 
 .hero-text {
@@ -110,6 +111,10 @@ main {
     background: rgba(0, 0, 0, 0.5);
     padding: 1rem;
     font-size: 1.5rem;
+    z-index: 1;
+    width: 90%; /* Ensure it does not exceed image width */
+    max-width: 700px; /* Max width for text content */
+    text-align: center; /* Center-align text */
 }
 
 .cta-button {
@@ -120,11 +125,25 @@ main {
     text-decoration: none;
     font-size: 1.2rem;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
-    background-color: #ff8c00; /* Darker orange on hover */
+/* Events Section */
+.events {
+    padding: 2rem 1rem; /* Add space inside the events section */
+    margin-top: 3rem; /* Add space above the events section */
+    text-align: center;
+}
+
+.events h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem; /* Add more space below the heading */
+}
+
+.events p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 1rem; /* Add spacing above the paragraph */
 }
 
 /* Footer */
@@ -160,8 +179,7 @@ footer {
 
 .spotlight img {
     width: 100%;
-    height: 250px;
-    object-fit: cover; /* Ensure images fill the area while maintaining aspect ratio */
+    height: auto;
     border-radius: 5px;
 }
 
@@ -187,13 +205,30 @@ footer {
 
 /* Media Queries */
 @media (max-width: 768px) {
+    .hero {
+        height: 250px; /* Adjust hero image height for smaller screens */
+    }
+
+    .hero-text {
+        font-size: 1.2rem; /* Smaller text on mobile */
+        padding: 0.5rem;
+    }
+
+    .events h2 {
+        font-size: 1.5rem; /* Adjust heading size */
+    }
+
+    .events p {
+        font-size: 1rem;
+    }
+
     .spotlights {
-        flex-direction: column;
+        flex-direction: column; /* Stack items vertically on mobile */
     }
 
     .spotlight {
         width: 80%;
-        margin: 1rem auto;
+        margin: 1rem auto; /* Center the spotlight cards */
     }
 
     nav ul {
@@ -206,6 +241,7 @@ footer {
         display: flex;
     }
 }
+
 
 /* Lazy Loading */
 img[loading="lazy"], iframe[loading="lazy"] {
