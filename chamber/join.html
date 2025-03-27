@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Join the Chamber</title>
+        <meta name="description" content="Join the Chamber and be part of our community.">
+
+        <!-- Open Graph Meta Tags for Social Media -->
+        <meta property="og:title" content="Join the Chamber">
+        <meta property="og:description" content="Sign up and become a part of the Chamber.">
+        <meta property="og:image" content="images/attraction2.webp.jpg">
+        <meta property="og:url" content="https://yourusername.github.io/WDD230/chamber/join.html">
+
+        <!-- Favicon -->
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+        <!-- Link to existing CSS files -->
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/larger.css">
+    </head>
+    <body>
+        <header>
+            <img src="images/profile.JPG" alt="TUYISHIME Eric" width="100" height="100">
+            <span>Chamber Site - TUYISHIME Eric</span>
+            <!-- Dark Mode Toggle Button -->
+            <button id="dark-mode-toggle">🌙</button>
+        </header>
+
+        <nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">☰</button>
+            <ul id="navbar">
+                <li><a href="#home-link">Home</a></li>
+                <li><a href="#chamber">Chamber</a></li>
+                <li><a href="#site-plan">Site Plan</a></li>
+                <li><a href="#join">Join</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h1>Join the Chamber</h1>
+            <p>Fill out the form below to join our community. We look forward to having you on board!</p>
+
+            <!-- The Join Form -->
+            <form method="GET" action="thankyou.html">
+                <fieldset>
+                    <legend>Application Form</legend>
+
+                    <!-- First Name -->
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                    
+                    <!-- Last Name -->
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" required>
+
+                    <!-- Position Title -->
+                    <label for="position">Position within Organization:</label>
+                    <input type="text" id="position" name="position" pattern="[A-Za-z\s\-]{7,}" required>
+
+                    <!-- Email -->
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required placeholder="example@domain.com">
+
+                    <!-- Phone Number -->
+                    <label for="phone">Mobile Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <!-- Business Name -->
+                    <label for="organization-name">Business/Organization Name:</label>
+                    <input type="text" id="organization-name" name="organization-name" required>
+
+                    <!-- Membership Level -->
+                    <label for="membership-level">Membership Level:</label>
+                    <select id="membership-level" name="membership-level">
+                        <option value="NP Membership">NP Membership (Non-Profit) - No Fee</option>
+                        <option value="Bronze Membership">Bronze Membership</option>
+                        <option value="Silver Membership">Silver Membership</option>
+                        <option value="Gold Membership">Gold Membership</option>
+                    </select>
+
+                    <!-- Description -->
+                    <label for="description">Business/Organization Description:</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+
+                    <!-- Timestamp -->
+                    <input type="hidden" id="timestamp" name="timestamp" value="<?= date('Y-m-d H:i:s'); ?>">
+
+                    <!-- Submit Button -->
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
+
+            <!-- Membership Benefits Section -->
+            <section id="membership-benefits">
+                <h2>Membership Levels and Benefits</h2>
+                <ul>
+                    <li><strong>NP Membership:</strong> No fee, includes access to Chamber resources.</li>
+                    <li><strong>Bronze Membership:</strong> Basic benefits including newsletters and events.</li>
+                    <li><strong>Silver Membership:</strong> Access to training programs and discounted event tickets.</li>
+                    <li><strong>Gold Membership:</strong> Premium benefits, spotlight advertising, and exclusive event access.</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="currentYear"></span> TUYISHIME Eric, Kigali RWANDA</p>
+            <p id="lastModified"></p>
+        </footer>
+
+        <!-- External JavaScript File -->
+        <script src="scripts/main.js"></script>
+    </body>
+</html>

@@ -1,7 +1,6 @@
 /* Larger Screen Styles */
 @media screen and (min-width: 768px) {
-
-    /* Navigation */
+    /* Navigation - Left unchanged */
     nav ul {
         flex-direction: row;
         justify-content: center;
@@ -11,7 +10,7 @@
         margin: 0 1rem;
     }
 
-    /* Header */
+    /* Header - Left unchanged */
     header {
         padding: 2rem;
         text-align: left;
@@ -25,95 +24,172 @@
         font-size: 2rem;
     }
 
-    /* Hero Section */
-    .hero-text {
-        font-size: 1.5rem;
-        padding: 1.5rem;
-    }
-
-    .hero {
-        position: relative;
-        text-align: center;
-        height: 400px;
-    }
-
-    .hero-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
     /* Main Content Layout */
     main {
         display: grid;
-        grid-template-columns: 1fr 1fr;  /* 2-column layout */
+        grid-template-columns: 1fr 1fr; /* 2-column layout for the content */
         gap: 2rem;
         max-width: 1200px;
         margin: auto;
     }
 
+    /* Form & Membership Benefits Layout */
+    form {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 2rem;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Form Styling */
+    form h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #003366;
+    }
+
+    form label {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="tel"],
+    form select,
+    form textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 1.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+    }
+
+    form input[type="submit"] {
+        background-color: #00509E;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border-radius: 4px;
+        width: 100%;
+        transition: background-color 0.3s ease;
+    }
+
+    form input[type="submit"]:hover {
+        background-color: #003366;
+    }
+
+    /* Membership Benefits Sidebar */
+    #membership-benefits {
+        background-color: #f1f1f1;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #membership-benefits h3 {
+        font-size: 1.5rem;
+        color: #003366;
+        margin-bottom: 1rem;
+    }
+
+    #membership-benefits ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    #membership-benefits li {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 1rem;
+    }
+
+    /* Responsive Adjustments for Flex Layout */
+    main {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    form {
+        width: 60%;
+    }
+
+    #membership-benefits {
+        width: 35%;
+    }
+
     /* Business Spotlights */
     .spotlights {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
-        margin-top: 2rem; /* Add space above the spotlights */
+        margin-top: 2rem;
     }
 
     .spotlight {
         background-color: #ffffff;
-        border-radius: 10px; /* Slightly round the corners for a modern look */
-        overflow: hidden; /* Ensure the image fits within the container */
-        padding: 1rem; /* Reduce padding for better focus on content */
-        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Slightly larger shadow for depth */
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 1rem;
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 400px;  /* Set the height to a more noticeable size */
+        height: 400px;
     }
 
     .spotlight:hover {
-        transform: translateY(-10px); /* Hover effect for depth */
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+        transform: translateY(-10px);
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     }
 
     .spotlight img {
-        width: 100%; /* Ensure the image takes up full width */
-        height: 250px; /* Set fixed height for images */
-        object-fit: cover; /* Ensure the image fills the area while maintaining aspect ratio */
-        border-radius: 8px; /* Round the corners of the image */
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px;
     }
 
     .spotlight h3 {
-        font-size: 2rem; /* Increase font size for business name */
+        font-size: 2rem;
         color: #003366;
-        margin-top: 1rem; /* Add some space between the image and the title */
-        font-weight: bold; /* Make the title bold */
+        margin-top: 1rem;
+        font-weight: bold;
     }
 
     .spotlight p {
         font-size: 1.2rem;
         margin-top: 1rem;
-        color: #555; /* Slightly lighter text for the description */
-        line-height: 1.6; /* Improve readability */
+        color: #555;
+        line-height: 1.6;
     }
 
     .spotlight .cta-button {
         background-color: #00509E;
         color: white;
         margin-top: 1.5rem;
-        padding: 0.8rem 1.5rem; /* Larger button for better clickability */
+        padding: 0.8rem 1.5rem;
         font-size: 1.2rem;
         text-decoration: none;
         border-radius: 5px;
         transition: background-color 0.3s ease;
-        display: inline-block; /* Ensures the button is placed correctly */
-        text-align: center;
     }
 
     .spotlight .cta-button:hover {
-        background-color: #003366; /* Darker blue on hover */
+        background-color: #003366;
     }
 
     /* Footer */
@@ -121,87 +197,20 @@
         text-align: center;
         padding: 2rem;
     }
-
-
-
-    /* Lazy Loading */
-    img[loading="lazy"], iframe[loading="lazy"] {
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-    img.loaded, iframe.loaded {
-        opacity: 1;
-    }
-    /* General Styles for Sidebar Layout */
-main.discover {
-    display: grid;
-    grid-template-columns: 1fr 3fr; /* Sidebar (1fr) and Main Content (3fr) */
-    gap: 2rem;
-    padding: 2rem;
-}
-
-.sidebar {
-    background-color: #f4f4f4;
-    padding: 1.5rem;
-    border-radius: 8px;
-}
-
-.sidebar h2 {
-    font-size: 1.5rem;
-}
-
-.sidebar section {
-    margin-top: 2rem;
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar li {
-    font-size: 1.1rem;
-    margin: 0.5rem 0;
-}
-
-/* Gallery (Main Content) */
-.gallery h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
-    gap: 1rem;
-}
-
-.gallery-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Mobile View (Single Column Layout) */
-@media (max-width: 768px) {
-    main.discover {
-        grid-template-columns: 1fr; /* Single column layout on mobile */
+@media (max-width: 767px) {
+    main {
+        display: block;
     }
 
-    .image-grid {
-        grid-template-columns: 1fr; /* Single image per row */
+    form,
+    #membership-benefits {
+        width: 100%;
     }
 
-    .gallery-image {
-        transform: none;
-        box-shadow: none;
+    .spotlights {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
     }
-}
 }

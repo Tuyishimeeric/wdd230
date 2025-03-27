@@ -1,12 +1,12 @@
 
-/* Normalize CSS */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* General Styles */
+/* Body Styles */
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #f4f4f4;
@@ -82,68 +82,60 @@ nav a {
     cursor: pointer;
 }
 
-/* Main Content */
-main {
-    padding: 1rem;
-    text-align: center;
+/* Form Styling (now included in base.css) */
+form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
-/* Hero Section */
-.hero {
-    position: relative;
-    text-align: center;
-    height: 300px; /* Fixed height for the hero section */
-    margin-bottom: 2rem; /* Add space below the hero section */
-}
-
-.hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 1rem;
-    font-size: 1.5rem;
-    z-index: 1;
-    width: 90%; /* Ensure it does not exceed image width */
-    max-width: 700px; /* Max width for text content */
-    text-align: center; /* Center-align text */
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: #FFA500;
-    color: white;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-}
-
-/* Events Section */
-.events {
-    padding: 2rem 1rem; /* Add space inside the events section */
-    margin-top: 3rem; /* Add space above the events section */
-    text-align: center;
-}
-
-.events h2 {
+form h2 {
     font-size: 2rem;
-    margin-bottom: 1.5rem; /* Add more space below the heading */
+    margin-bottom: 1rem;
+    color: #003366;
 }
 
-.events p {
+form label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="submit"] {
+    background-color: #00509E;
+    color: white;
+    border: none;
+    padding: 12px 20px;
     font-size: 1.2rem;
-    color: #555;
-    line-height: 1.6;
-    margin-top: 1rem; /* Add spacing above the paragraph */
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #003366;
 }
 
 /* Footer */
@@ -152,174 +144,4 @@ footer {
     padding: 1rem;
     background-color: #003366;
     color: white;
-}
-
-/* Business Spotlights */
-.spotlights {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-}
-
-.spotlight {
-    background-color: #ffffff;
-    border-radius: 5px;
-    width: 30%;
-    margin: 1rem;
-    padding: 1rem;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.spotlight:hover {
-    transform: translateY(-5px);
-}
-
-.spotlight img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.spotlight h3 {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-}
-
-.spotlight p {
-    font-size: 1rem;
-    margin-top: 0.5rem;
-}
-
-.spotlight .cta-button {
-    background-color: #00509E;
-    color: white;
-    margin-top: 1rem;
-    text-align: center;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .hero {
-        height: 250px; /* Adjust hero image height for smaller screens */
-    }
-
-    .hero-text {
-        font-size: 1.2rem; /* Smaller text on mobile */
-        padding: 0.5rem;
-    }
-
-    .events h2 {
-        font-size: 1.5rem; /* Adjust heading size */
-    }
-
-    .events p {
-        font-size: 1rem;
-    }
-
-    .spotlights {
-        flex-direction: column; /* Stack items vertically on mobile */
-    }
-
-    .spotlight {
-        width: 80%;
-        margin: 1rem auto; /* Center the spotlight cards */
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul.show {
-        display: flex;
-    }
-}
-
-
-/* Lazy Loading */
-img[loading="lazy"], iframe[loading="lazy"] {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-img.loaded, iframe.loaded {
-    opacity: 1;
-}
-/* General Styles for Sidebar Layout */
-main.discover {
-    display: grid;
-    grid-template-columns: 1fr 3fr; /* Sidebar (1fr) and Main Content (3fr) */
-    gap: 2rem;
-    padding: 2rem;
-}
-
-.sidebar {
-    background-color: #f4f4f4;
-    padding: 1.5rem;
-    border-radius: 8px;
-}
-
-.sidebar h2 {
-    font-size: 1.5rem;
-}
-
-.sidebar section {
-    margin-top: 2rem;
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar li {
-    font-size: 1.1rem;
-    margin: 0.5rem 0;
-}
-
-/* Gallery (Main Content) */
-.gallery h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
-    gap: 1rem;
-}
-
-.gallery-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Mobile View (Single Column Layout) */
-@media (max-width: 768px) {
-    main.discover {
-        grid-template-columns: 1fr; /* Single column layout on mobile */
-    }
-
-    .image-grid {
-        grid-template-columns: 1fr; /* Single image per row */
-    }
-
-    .gallery-image {
-        transform: none;
-        box-shadow: none;
-    }
 }
