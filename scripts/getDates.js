@@ -42,4 +42,13 @@ window.addEventListener('resize', () => {
         navbar.classList.remove('show');
         hamburger.setAttribute('aria-expanded', 'false');
     }
+
+
+if (password !== confirmPassword) {
+    alert("Passwords do not match. Please try again.");
+    event.preventDefault();
+    document.getElementById("password").focus();
+    document.getElementById("password").value = "";
+    document.getElementById("confirmPassword").value = "";
+}
 });

@@ -1,0 +1,105 @@
+/* form.css */
+
+/* :root variables for common properties */
+:root {
+    --primary-color: #4CAF50;
+    --background-color: #f4f4f4;
+    --font-size: 16px;
+    --input-padding: 10px;
+    --button-padding: 12px;
+    --border-radius: 8px;
+}
+
+/* Basic resets */
+body, h1, h2, p, label, input, button {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    font-size: var(--font-size);
+    padding: 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 10px 0;
+    text-align: center;
+    color:rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+main {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: var(--input-padding);
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    width: 100%;
+}
+
+input[type="range"] {
+    width: 50%;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--button-padding);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 16px;
+    width: 100px;
+    align-self: flex-start;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+small {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+}
