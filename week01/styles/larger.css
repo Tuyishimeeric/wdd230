@@ -1,0 +1,313 @@
+
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode header {
+    background-color: #1a237e;
+}
+
+body.dark-mode footer {
+    background-color: #1a237e;
+}
+
+body.dark-mode .cta-button {
+    background-color: #FF9800;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366;
+    color: white;
+    padding: 2rem;
+    text-align: left;
+}
+
+header img {
+    height: 80px;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* Navigation */
+nav {
+    background-color: #00509E;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+/* Spotlight Section (aligned grid with equal-sized cards) */
+.spotlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 2rem;
+    padding: 2rem;
+    align-items: stretch; /* Ensure cards stretch to same height */
+}
+
+.spotlight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 1.5rem;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.spotlight img {
+    max-width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.spotlight h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.spotlight p {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+
+.spotlight .cta-button {
+    display: inline-block;
+    background-color: #00509E;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+}
+
+.spotlight:hover {
+    transform: scale(1.05);
+}
+
+.spotlight a.cta-button:hover {
+    background-color: #003366;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #003366;
+    color: white;
+}
+
+/* Mobile Styles (Hamburger Menu) */
+@media screen and (max-width: 768px) {
+    /* Navigation */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+        position: relative;
+        width: 100%;
+        height: 50vh;
+    }
+
+    .hero picture {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .hero .overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        font-size: 1.5rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 1rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    /* Spotlight Section */
+    .spotlights {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .spotlight {
+        width: 80%;
+        max-width: 400px;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .spotlight img {
+        height: 250px;
+    }
+
+    .spotlight h3 {
+        font-size: 1.1rem;
+    }
+
+    .spotlight p {
+        font-size: 0.9rem;
+    }
+
+    .spotlight a.cta-button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Larger Screen Styles (above 768px) */
+@media screen and (min-width: 768px) {
+    /* Spotlight Section */
+    .spotlights {
+        grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    }
+}
+
+/* Image Styles */
+img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* General Form Styling */
+form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+form h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #003366;
+}
+
+form label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="submit"] {
+    background-color: #00509E;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #003366;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #003366;
+    color: white;
+}
