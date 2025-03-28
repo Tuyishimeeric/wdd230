@@ -145,3 +145,174 @@ footer {
     background-color: #003366;
     color: white;
 }
+
+/* Mobile Styles (Hamburger Menu) */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    /* General Image Styling */
+    img {
+        width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 100%; /* Ensure images don't stretch beyond their container */
+        object-fit: cover; /* Ensures images cover their container, preserving aspect ratio */
+    }
+
+    /* Hero Section */
+    .hero {
+        position: relative;
+        width: 100%;
+        height: 100vh; /* Full viewport height */
+    }
+
+    .hero picture {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensure the image covers the hero section without distortion */
+    }
+
+    /* Overlay Text on Hero Image */
+    .hero .overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        font-size: 1.5rem;
+        background-color: rgba(0, 0, 0, 0.5); /* Slight overlay for better text readability */
+        padding: 1rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem; /* Adjust size for hero title */
+        margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Spotlight Section */
+    .spotlights {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: space-around;
+        padding: 2rem;
+    }
+
+    .spotlight {
+        width: 100%;
+        max-width: 300px; /* Maximum width of each spotlight section */
+        text-align: center;
+        background-color: #fff;
+        padding: 1rem;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+
+    .spotlight img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .spotlight h3 {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    .spotlight p {
+        font-size: 1rem;
+        margin: 1rem 0;
+    }
+
+    /* Hover Effect for Spotlight Cards */
+    .spotlight:hover {
+        transform: scale(1.05); /* Slightly enlarge the card on hover */
+    }
+
+    .spotlight a.cta-button {
+        display: inline-block;
+        background-color: #00509E;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .spotlight a.cta-button:hover {
+        background-color: #003366;
+    }
+
+    /* Responsive Design for Mobile (max-width: 768px) */
+    /* Hero Section */
+    .hero {
+        height: 50vh; /* Reduce hero height on smaller screens */
+    }
+
+    .hero h2 {
+        font-size: 1.5rem; /* Adjust title size */
+    }
+
+    .hero p {
+        font-size: 0.9rem; /* Adjust subtitle size */
+    }
+
+    /* Adjust Hero Image */
+    .hero-image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Spotlight Section */
+    .spotlights {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .spotlight {
+        width: 80%; /* Reduce width of spotlights on mobile */
+        max-width: 400px; /* Set a max-width for larger screens */
+        margin-bottom: 2rem; /* Add margin between spotlight sections */
+    }
+
+    .spotlight h3 {
+        font-size: 1.1rem; /* Slightly smaller heading for mobile */
+    }
+
+    .spotlight p {
+        font-size: 0.9rem; /* Adjust paragraph text for mobile */
+    }
+
+    .spotlight a.cta-button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
