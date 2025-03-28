@@ -298,17 +298,17 @@ footer {
     }
 
     .spotlight {
-        width: 80%; /* Reduce width of spotlights on mobile */
-        max-width: 400px; /* Set a max-width for larger screens */
-        margin-bottom: 2rem; /* Add margin between spotlight sections */
+        width: 80%;
+        max-width: 400px;
+        margin-bottom: 2rem; 
     }
 
     .spotlight h3 {
-        font-size: 1.1rem; /* Slightly smaller heading for mobile */
+        font-size: 1.1rem; 
     }
 
     .spotlight p {
-        font-size: 0.9rem; /* Adjust paragraph text for mobile */
+        font-size: 0.9rem; 
     }
 
     .spotlight a.cta-button {
