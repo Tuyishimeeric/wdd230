@@ -1,29 +1,31 @@
-// OpenWeatherMap API key
-const apiKey = 'c7fc519cb690f0e7d8c8a5325e0c4c50';
-const city = 'Kigali'; 
 
-// OpenWeatherMap API URL
-const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-
-
-fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
-        
-        const weatherDescription = data.weather[0].description;
-        const temperature = data.main.temp;
-        const iconCode = data.weather[0].icon;
-
+async function fetchWeather() {
+    const apiKey = 'c7fc519cb690f0e7d8c8a5325e0c4c50';
+    const city = 'London';
     
-        document.getElementById('weather-description').innerText = weatherDescription;
-        document.getElementById('temperature').innerText = `${temperature}°C`;
-        
+    // Fetch the weather data
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`);
     
-        const weatherIconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
-        document.getElementById('weather-icon').src = weatherIconUrl;
-    })
-    .catch(error => {
-        console.error('Error fetching weather data:', error);
-        document.getElementById('weather-description').innerText = 'Weather information could not be loaded.';
-        document.getElementById('temperature').innerText = 'Temperature data unavailable.';
-    });
+    if (!response.ok) {
+      console.error('Failed to fetch weather data');
+      return;
+    }
+  
+    const data = await response.json();
+  
+    // Display the temperature and description
+    const temperature = data.main.temp;
+    const description = data.weather[0].description;
+    const iconCode = data.weather[0].icon;
+  
+    // Set the weather description and temperature in the DOM
+    document.getElementById('temperature').textContent = `${temperature}°C`;
+    document.getElementById('description').textContent = description;
+  
+    // Set the weather icon dynamically
+    const weatherIconImg = document.getElementById('weather-icon');
+    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+    weatherIconImg.src = iconUrl;
+  }
+  
+  fetchWeather();
