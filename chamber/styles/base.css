@@ -312,4 +312,61 @@ footer {
         font-size: 1rem;
         padding: 8px 16px;
     }
+    /* Style for the grid view */
+#members-container.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Style for individual member cards */
+.member-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.member-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* Style for list view (default view) */
+#members-container {
+    display: block;
+}
+
+/* Style for each list item */
+.member-card h3 {
+    margin: 10px 0;
+}
+
+.member-card p {
+    margin: 5px 0;
+}
+
+.member-card a {
+    text-decoration: none;
+    color: #0077b6;
+}
+
+#toggle-view {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#toggle-view:hover {
+    background-color: #005f87;
+}
+
 }
