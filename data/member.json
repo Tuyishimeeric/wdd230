@@ -1,0 +1,67 @@
+{
+    "members": [
+        {
+            "name": "Company One",
+            "address": "123 First St, Kigali, RW",
+            "phone": "+250 123 456 789",
+            "website": "http://companyone.com",
+            "image": "companyone.jpg",
+            "membership_level": "Gold",
+            "info": "Leading technology solutions provider."
+        },
+        {
+            "name": "Company Two",
+            "address": "456 Second Ave, Kigali, RW",
+            "phone": "+250 987 654 321",
+            "website": "http://companytwo.com",
+            "image": "companytwo.jpg",
+            "membership_level": "Silver",
+            "info": "Specialized in eco-friendly products."
+        },
+        {
+            "name": "Company Three",
+            "address": "789 Third Blvd, Kigali, RW",
+            "phone": "+250 111 222 333",
+            "website": "http://companythree.com",
+            "image": "companythree.jpg",
+            "membership_level": "Bronze",
+            "info": "Top-rated service company."
+        },
+        {
+            "name": "Company Four",
+            "address": "123 Fourth St, Kigali, RW",
+            "phone": "+250 444 555 666",
+            "website": "http://companyfour.com",
+            "image": "companyfour.jpg",
+            "membership_level": "Gold",
+            "info": "Leading in environmental sustainability."
+        },
+        {
+            "name": "Company Five",
+            "address": "456 Fifth Ave, Kigali, RW",
+            "phone": "+250 777 888 999",
+            "website": "http://companyfive.com",
+            "image": "companyfive.jpg",
+            "membership_level": "Silver",
+            "info": "Affordable health care services."
+        },
+        {
+            "name": "Company Six",
+            "address": "789 Sixth Blvd, Kigali, RW",
+            "phone": "+250 333 444 555",
+            "website": "http://companysix.com",
+            "image": "companysix.jpg",
+            "membership_level": "Bronze",
+            "info": "Innovators in digital marketing."
+        },
+        {
+            "name": "Company Seven",
+            "address": "101 Seventh St, Kigali, RW",
+            "phone": "+250 555 666 777",
+            "website": "http://companyseven.com",
+            "image": "companyseven.jpg",
+            "membership_level": "Gold",
+            "info": "Pioneers in AI technologies."
+        }
+    ]
+}
