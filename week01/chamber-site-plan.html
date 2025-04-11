@@ -5,12 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chamber of Commerce</title>
-  <link rel="stylesheet" href="base.css" />
-  <link rel="stylesheet" href="large.css" media="(min-width: 768px)" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/larger.css" media="(min-width: 768px)" />
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Chamber Logo" />
+    <img src="images/logo.png" alt="Chamber Logo" />
     <h1>Local Chamber of Commerce</h1>
     <button id="dark-mode-toggle">🌙</button>
     <button id="hamburger" class="hamburger">☰</button>
@@ -27,65 +27,66 @@
 
   <section class="hero">
     <picture>
-      <img src="hero.jpg" alt="Community" class="hero-image" loading="eager" />
+      <img src="images/hero.jpg" alt="Community" class="hero-image" loading="eager" />
     </picture>
     <div class="overlay">
       <h2>Supporting Local Business</h2>
       <p>Together we grow stronger</p>
     </div>
   </section>
-
+  
   <section class="spotlights">
     <div class="spotlight">
-      <img src="business1.jpg" alt="Business 1" loading="lazy" />
+      <img src="images/business1.jpg" alt="Business 1" loading="lazy" />
       <h3>Business One</h3>
       <p>Great local services for everyone.</p>
       <a href="#" class="cta-button">Learn More</a>
     </div>
     <div class="spotlight">
-      <img src="business2.jpg" alt="Business 2" loading="lazy" />
+      <img src="images/business2.jpg" alt="Business 2" loading="lazy" />
       <h3>Business Two</h3>
       <p>Locally owned and operated.</p>
       <a href="#" class="cta-button">Learn More</a>
     </div>
     <div class="spotlight">
-      <img src="business3.jpg" alt="Business 3" loading="lazy" />
+      <img src="images/business3.jpg" alt="Business 3" loading="lazy" />
       <h3>Business Three</h3>
       <p>Helping the community thrive.</p>
       <a href="#" class="cta-button">Learn More</a>
     </div>
   </section>
-
+  
   <form>
     <h2>Join the Chamber</h2>
     <label for="name">Name</label>
     <input type="text" id="name" name="name" required />
-
+  
     <label for="email">Email</label>
     <input type="email" id="email" name="email" required />
-
+  
     <label for="phone">Phone</label>
     <input type="tel" id="phone" name="phone" />
-
+  
     <label for="membership">Membership Level</label>
     <select id="membership" name="membership">
       <option value="basic">Basic</option>
       <option value="premium">Premium</option>
     </select>
-
+  
     <label for="message">Message</label>
     <textarea id="message" name="message"></textarea>
-
+  
     <input type="submit" value="Submit" />
   </form>
-
+  
   <footer>
     <p id="last-visit-message"></p>
     <p>&copy; <span id="currentYear"></span> Chamber of Commerce</p>
     <p id="lastModified"></p>
   </footer>
-
+  
   <script src="main.js"></script>
+  
 </body>
 </html>
 
