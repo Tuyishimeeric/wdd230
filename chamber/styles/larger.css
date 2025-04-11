@@ -367,3 +367,56 @@ footer {
 #toggle-view:hover {
     background-color: #005f87;
 }
+/* Membership badge styles */
+.badge {
+    margin-top: 10px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.gold {
+    background-color: gold;
+    color: #333;
+}
+
+.silver {
+    background-color: silver;
+    color: #333;
+}
+
+.bronze {
+    background-color: peru;
+    color: white;
+}
+
+/* Card hover effect */
+.member-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Improve typography in cards */
+.member-card h3 {
+    font-size: 1.2rem;
+    color: #003366;
+}
+
+.member-card p {
+    font-size: 1rem;
+}
+
+/* Make website link look better */
+.member-card a {
+    color: #00509E;
+    font-weight: bold;
+}
+
+.member-card a:hover {
+    text-decoration: underline;
+}
+
