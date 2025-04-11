@@ -238,6 +238,15 @@ footer {
     .spotlights {
         grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
     }
+    .humberger{
+        display: none;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    }
 }
 
 /* Image Styles */

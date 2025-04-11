@@ -13,39 +13,51 @@ darkModeToggle.addEventListener('click', () => {
     darkModeToggle.textContent = body.classList.contains('dark-mode') ? '🌞' : '🌙';
 });
 
-// Hamburger Menu Toggle
+// Hamburger Menu Toggle - Only Active in Mobile View
 const hamburger = document.getElementById('hamburger');
 const navbar = document.getElementById('navbar');
 
-hamburger.addEventListener('click', () => {
-    navbar.classList.toggle('show');
+function isMobileView() {
+    return window.innerWidth <= 768;
+}
+
+function toggleMenu() {
+    if (isMobileView()) {
+        navbar.classList.toggle('show');
+    }
+}
+
+hamburger.addEventListener('click', toggleMenu);
+
+// Close menu on window resize if not in mobile view
+window.addEventListener('resize', () => {
+    if (!isMobileView()) {
+        navbar.classList.remove('show');
+    }
 });
 
 // Lazy loading for images below the fold (business spotlights and iframe)
 const lazyLoadImages = () => {
     const images = document.querySelectorAll('img[loading="lazy"], iframe[loading="lazy"]');
-    
+
     images.forEach(image => {
         image.addEventListener('load', () => {
-            image.classList.add('loaded'); // Optional: Add a class when loaded for animation or other purposes.
+            image.classList.add('loaded');
         });
     });
 };
 
-lazyLoadImages();  // Invoke on page load
-// Get the current date
-const currentDate = Date.now();
+lazyLoadImages();
 
-// Get last visit date from localStorage, if available
+// Page Visit Tracker
+const currentDate = Date.now();
 const lastVisit = localStorage.getItem('lastVisit');
 const lastVisitMessage = document.getElementById('last-visit-message');
 
-// If it's the user's first visit
 if (!lastVisit) {
     localStorage.setItem('lastVisit', currentDate);
     lastVisitMessage.textContent = 'Welcome! Let us know if you have any questions.';
 } else {
-    // Calculate time difference in days
     const timeDiff = currentDate - lastVisit;
     const daysSinceLastVisit = Math.floor(timeDiff / (1000 * 3600 * 24));
 
@@ -56,6 +68,5 @@ if (!lastVisit) {
         lastVisitMessage.textContent = `You last visited ${daysSinceLastVisit} ${dayText} ago.`;
     }
 
-    // Update the last visit date in localStorage
     localStorage.setItem('lastVisit', currentDate);
 }
