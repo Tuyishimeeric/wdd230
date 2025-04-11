@@ -1,114 +1,91 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Chamber of Commerce - Home</title>
-    <meta name="description" content="Welcome to the Chamber of Commerce. Join us to support local businesses and stay updated on upcoming events.">
 
-    <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="Chamber of Commerce - Home">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="images/logo.png">
-    <meta property="og:url" content="https://tuyishimeeric.github.io/chamber-site">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="images/icon.png" type="image/x-icon">
-    
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chamber of Commerce</title>
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="large.css" media="(min-width: 768px)" />
 </head>
 <body>
-    <header>
-        <img src="images/logo.png" alt="Chamber of Commerce Logo" width="100">
-        <h1>Chamber of Commerce</h1>
-        <button id="dark-mode-toggle">🌙</button>
-    </header>
+  <header>
+    <img src="logo.png" alt="Chamber Logo" />
+    <h1>Local Chamber of Commerce</h1>
+    <button id="dark-mode-toggle">🌙</button>
+    <button id="hamburger" class="hamburger">☰</button>
+  </header>
 
-    <nav>
-        <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">☰</button>
-        <ul id="navbar">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#directory">Directory</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+  <nav id="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Directory</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 
-    <main>
-        <!-- Hero Section with WebP images and Overlay Text -->
-        <section class="hero">
-            <picture>
-                <!-- Mobile Image (400px) -->
-                <source srcset="images/baton_rouge_louisiana_temple.webp" media="(max-width: 400px)" type="image/webp">
-                <!-- Larger Image (960px) -->
-                <source srcset="images/02-Billings-Montana-Temple-1572044.webp" media="(min-width: 401px)" type="image/webp">
-                <!-- Fallback Image -->
-                <img src="images/01-Billings-Montana-Temple-2220702.jpg" alt="Latter-day Temple" class="hero-image">
-            </picture>
-            <div class="overlay">
-                <h2>Latter-day Temple</h2>
-                <p>Peace and serenity in a beautiful place.</p>
-            </div>
-        </section>
+  <section class="hero">
+    <picture>
+      <img src="hero.jpg" alt="Community" class="hero-image" loading="eager" />
+    </picture>
+    <div class="overlay">
+      <h2>Supporting Local Business</h2>
+      <p>Together we grow stronger</p>
+    </div>
+  </section>
 
-        <!-- Events Section -->
-        <section class="events">
-            <h2>Upcoming Events</h2>
-            <p>Stay tuned for networking opportunities and business workshops.</p>
-        </section>
+  <section class="spotlights">
+    <div class="spotlight">
+      <img src="business1.jpg" alt="Business 1" loading="lazy" />
+      <h3>Business One</h3>
+      <p>Great local services for everyone.</p>
+      <a href="#" class="cta-button">Learn More</a>
+    </div>
+    <div class="spotlight">
+      <img src="business2.jpg" alt="Business 2" loading="lazy" />
+      <h3>Business Two</h3>
+      <p>Locally owned and operated.</p>
+      <a href="#" class="cta-button">Learn More</a>
+    </div>
+    <div class="spotlight">
+      <img src="business3.jpg" alt="Business 3" loading="lazy" />
+      <h3>Business Three</h3>
+      <p>Helping the community thrive.</p>
+      <a href="#" class="cta-button">Learn More</a>
+    </div>
+  </section>
 
-        <!-- Weather Card -->
-        <section class="weather">
-            <h2>Local Weather</h2>
-            <p>Loading current weather...</p>
-        </section>
+  <form>
+    <h2>Join the Chamber</h2>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required />
 
-        <!-- Business Spotlights Section -->
-        <section class="spotlights">
-            <h2>Business Spotlights</h2>
-            <div class="spotlight">
-                <img src="images/business1.png" alt="SERVICO">
-                <h3>SERVICO</h3>
-                <p>We offer the best service and we are ready to serve you anytime, customer care.</p>
-                <a href="#" class="cta-button">Learn More</a>
-            </div>
-            <div class="spotlight">
-                <img src="images/business2.jpg" alt="INTERCONNECT">
-                <h3>INTERCONNECT</h3>
-                <p>We are the best service provider in the whole country, you just need to visit us and we will help you reach your dream.</p>
-                <a href="#" class="cta-button">Learn More</a>
-            </div>
-            <div class="spotlight">
-                <img src="images/business3.jpg" alt="DEV+">
-                <h3>DEV+</h3>
-                <p>Our key services include, software development. just talk to us.</p>
-                <a href="#" class="cta-button">Learn More</a>
-            </div>
-        </section>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required />
 
-        <!-- Page Visit Counter Section -->
-        <section class="info-card">
-            <h3>Page Visit Counter</h3>
-            <p>Number of visits: <span id="visitCount">0</span></p>
-        </section>
+    <label for="phone">Phone</label>
+    <input type="tel" id="phone" name="phone" />
 
-        <!-- Google Map Embed Section -->
-        <section class="google-map">
-            <iframe id="map" src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </section>
+    <label for="membership">Membership Level</label>
+    <select id="membership" name="membership">
+      <option value="basic">Basic</option>
+      <option value="premium">Premium</option>
+    </select>
 
-    </main>
+    <label for="message">Message</label>
+    <textarea id="message" name="message"></textarea>
 
-    <footer>
-        <p>Contact us: info@chamber.com | (+250) 785 100 566</p>
-        <p>&copy; <span id="currentYear"></span> Chamber of Commerce</p>
-        <p id="lastModified"></p>
-    </footer>
+    <input type="submit" value="Submit" />
+  </form>
 
-    <!-- JavaScript File -->
-    <script src="scripts/main.js"></script>
+  <footer>
+    <p id="last-visit-message"></p>
+    <p>&copy; <span id="currentYear"></span> Chamber of Commerce</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
+
